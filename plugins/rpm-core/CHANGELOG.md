@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/rowpacmal/rpm-agentic-collection/compare/rpm-core-v0.3.1...rpm-core-v0.4.0) (2026-11-02)
+
+
+### Features
+
+* **rpm-core:** add squash-merge step to pull-request skill ([#1](https://github.com/rowpacmal/rpm-agentic-collection/issues/1)) ([fdabd4a](https://github.com/rowpacmal/rpm-agentic-collection/commit/fdabd4a73d56cd5a4fb6de62760a432a5666833d))
+
 ## [0.3.1] - 2026-11-02
 
 ### Changed
