@@ -1,6 +1,6 @@
 ---
 name: pull-request
-description: Opens or updates a GitHub pull request with gh. The title is a Conventional Commit, because squash merges and release-please turn it into the commit and changelog line. The description covers what changed and why, how it was verified, and linked tickets. Use when the user asks to open, create, raise, or update a PR or pull request, or to write a PR title or description.
+description: Opens, updates, or squash-merges a GitHub pull request with gh. The title is a Conventional Commit, because squash merges and release-please turn it into the commit and changelog line. The description covers what changed and why, how it was verified, and linked tickets. Use when the user asks to open, create, raise, update, or merge a PR or pull request, or to write a PR title or description.
 argument-hint: "[base branch]"
 license: MIT
 metadata:
@@ -22,6 +22,18 @@ metadata:
    ```
    Use `gh pr edit` to update. Write the body to a temp file to avoid shell-quoting problems.
 6. Report the PR URL.
+
+## Merging
+
+Only when the user asks, and confirm first, since merging may publish a release or deploy.
+1. Re-read the PR title. With squash merges it becomes the commit on main and the changelog line, so fix it with `gh pr edit --title` before merging.
+2. Check that the PR's checks pass: `gh pr checks`.
+3. Merge the way the repo allows (squash is usual):
+   ```bash
+   gh pr merge --squash --delete-branch
+   ```
+   Don't pass `--subject` or `--body`, so the PR title is used as is and no commit body is added.
+4. Update the local default branch: `git switch <base> && git pull`.
 
 ## Title
 
