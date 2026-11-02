@@ -53,7 +53,7 @@ This installs only the skills. Hooks, including always-on guidelines and the gua
 ## Updating
 
 - **Users:** run `/plugin marketplace update rpm`, or turn on auto-update under `/plugin` → Marketplaces.
-- **Maintainers:** a plugin only reaches users when its `version` in `plugins/<name>/.claude-plugin/plugin.json` changes. Bump it in the same change, and add a `CHANGELOG.md` entry.
+- **Maintainers:** a plugin only reaches users when its `version` changes. release-please bumps versions and writes each plugin's `CHANGELOG.md` from Conventional Commits. Merge its release PR to ship.
 
 ## Develop
 

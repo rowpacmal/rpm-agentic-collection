@@ -32,10 +32,13 @@ Rules:
 
 ## Releasing a plugin change
 
-Users only receive a change when the plugin's `version` changes. In the same commit:
-1. Bump `version` in `plugins/<plugin>/.claude-plugin/plugin.json` (SemVer).
-2. Add an entry to `CHANGELOG.md` under the plugin's heading.
+Users only receive a change when the plugin's `version` changes. release-please handles this (`release-please-config.json`):
+- Every push to `main` updates one release PR. It bumps each changed plugin's `plugin.json` version and writes `plugins/<plugin>/CHANGELOG.md` from the commit subjects.
+- Merging the release PR tags `<plugin>-vX.Y.Z` and ships the new versions.
+- Never edit plugin versions or plugin changelogs by hand.
+- A plugin is released when a `feat`, `fix`, `perf`, or breaking commit touches files under `plugins/<plugin>/`. Skill text and hooks are product, so use `feat` or `fix` for them, not `docs` or `chore`, which don't release.
+- Commit subjects become changelog entries, so write them for users.
 
 ## Commits
 
-Conventional Commits, one subject line, no body, no attribution. Scopes: the plugin name (`rpm-core`, `rpm-design`, `rpm-security`, `rpm-testing`, `rpm-openproject`), or none for repo-wide changes.
+Conventional Commits, one subject line, no body (except a `Release-As: X.Y.Z` footer to force a version), no attribution. Scopes: the plugin name (`rpm-core`, `rpm-design`, `rpm-security`, `rpm-testing`, `rpm-openproject`), or none for repo-wide changes.

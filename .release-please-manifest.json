@@ -1,0 +1,7 @@
+{
+  "plugins/rpm-core": "0.3.1",
+  "plugins/rpm-design": "0.2.1",
+  "plugins/rpm-security": "0.2.0",
+  "plugins/rpm-testing": "0.1.0",
+  "plugins/rpm-openproject": "0.1.1"
+}
