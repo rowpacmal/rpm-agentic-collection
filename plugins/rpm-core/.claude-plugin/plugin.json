@@ -1,0 +1,12 @@
+{
+  "name": "rpm-core",
+  "version": "0.3.1",
+  "description": "Everyday engineering workflow: coding guidelines, test-first, planning, review, debugging, commits, PRs, releases, handoffs, ADRs, docs",
+  "author": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "homepage": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "repository": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "license": "MIT"
+}

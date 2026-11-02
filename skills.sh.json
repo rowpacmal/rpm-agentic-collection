@@ -1,0 +1,9 @@
+{
+  "$schema": "https://skills.sh/schemas/skills.sh.schema.json",
+  "paths": [
+    "./plugins/rpm-core/skills",
+    "./plugins/rpm-design/skills",
+    "./plugins/rpm-testing/skills",
+    "./plugins/rpm-openproject/skills"
+  ]
+}

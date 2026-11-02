@@ -1,0 +1,12 @@
+{
+  "name": "rpm-testing",
+  "version": "0.1.0",
+  "description": "Check running apps instead of guessing: browser checks and end-to-end tests with Playwright, and local API testing with curl, test code, Bruno, Hurl, or Postman collections",
+  "author": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "homepage": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "repository": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "license": "MIT"
+}

@@ -1,0 +1,25 @@
+#!/bin/sh
+# Git commit-msg hook: enforce single-line Conventional Commit messages (no body).
+# The only body line allowed is a release-please "Release-As: X.Y.Z" footer.
+# Skips merge commits. Install: git config core.hooksPath .githooks
+
+if git rev-parse -q --verify MERGE_HEAD >/dev/null 2>&1; then
+  exit 0
+fi
+
+msg_file="$1"
+subject=$(grep -v '^#' "$msg_file" | grep -m1 '[^[:space:]]')
+# Body lines other than a release-please "Release-As: X.Y.Z" footer are rejected.
+extra=$(grep -v '^#' "$msg_file" | grep '[^[:space:]]' | sed 1d | grep -cvE '^Release-As: [0-9]+\.[0-9]+\.[0-9]+' || true)
+
+if [ "$extra" -gt 0 ]; then
+  echo "commit-msg: use a single subject line, no body." >&2
+  exit 1
+fi
+
+if ! printf '%s' "$subject" | grep -Eq '^(feat|fix|docs|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9._/-]+\))?!?: [^ .](.*[^.])?$'; then
+  echo "commit-msg: expected 'type(scope): subject' (Conventional Commits), got: $subject" >&2
+  exit 1
+fi
+
+exit 0

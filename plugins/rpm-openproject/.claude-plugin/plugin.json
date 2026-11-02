@@ -1,0 +1,12 @@
+{
+  "name": "rpm-openproject",
+  "version": "0.1.1",
+  "description": "Read and update OpenProject work packages on any instance through API v3, with no delete path and a read-only switch",
+  "author": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "homepage": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "repository": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "license": "MIT"
+}

@@ -1,0 +1,12 @@
+{
+  "name": "rpm-security",
+  "version": "0.2.0",
+  "description": "Guardrails against destructive commands, plus security review and audit skills",
+  "author": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "homepage": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "repository": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "license": "MIT"
+}

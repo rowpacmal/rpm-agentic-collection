@@ -1,0 +1,100 @@
+{
+  "name": "rpm",
+  "description": "rowpacmal's reusable agent skills, hooks, and config for any project",
+  "owner": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "plugins": [
+    {
+      "name": "rpm-core",
+      "source": "./plugins/rpm-core",
+      "description": "Everyday engineering workflow: coding guidelines, test-first, planning, review, debugging, commits, PRs, releases, handoffs, ADRs, docs",
+      "category": "development",
+      "keywords": [
+        "git",
+        "commits",
+        "pull-requests",
+        "release",
+        "release-please",
+        "tdd",
+        "review",
+        "adr",
+        "docs",
+        "guidelines"
+      ]
+    },
+    {
+      "name": "rpm-design",
+      "source": "./plugins/rpm-design",
+      "description": "UI and UX design rules that keep generated interfaces from looking generic",
+      "category": "design",
+      "keywords": [
+        "ui",
+        "ux",
+        "design",
+        "frontend",
+        "accessibility",
+        "mockups"
+      ]
+    },
+    {
+      "name": "rpm-security",
+      "source": "./plugins/rpm-security",
+      "description": "Guardrails against destructive commands, plus security review and audit skills",
+      "category": "security",
+      "keywords": [
+        "security",
+        "audit",
+        "guardrails",
+        "hooks"
+      ]
+    },
+    {
+      "name": "rpm-testing",
+      "source": "./plugins/rpm-testing",
+      "description": "Check running apps instead of guessing: Playwright browser checks and e2e tests, local API testing with curl, Bruno, Hurl, or Postman collections",
+      "category": "testing",
+      "keywords": [
+        "testing",
+        "playwright",
+        "e2e",
+        "api",
+        "postman",
+        "bruno",
+        "hurl"
+      ]
+    },
+    {
+      "name": "rpm-openproject",
+      "source": "./plugins/rpm-openproject",
+      "description": "OpenProject work packages on any instance: read, move status, comment. No delete path, read-only switch",
+      "category": "productivity",
+      "keywords": [
+        "openproject",
+        "tickets",
+        "project-management",
+        "tracker"
+      ]
+    },
+    {
+      "name": "security-audit",
+      "source": {
+        "source": "github",
+        "repo": "cloudflare/security-audit-skill",
+        "sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8"
+      },
+      "description": "Upstream (Cloudflare, MIT): multi-phase security audit with independently verified, machine-readable findings. Pinned to a reviewed commit",
+      "homepage": "https://github.com/cloudflare/security-audit-skill",
+      "license": "MIT",
+      "category": "security",
+      "keywords": [
+        "security",
+        "audit",
+        "pentest",
+        "upstream"
+      ],
+      "strict": false
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "rpm-design",
+  "version": "0.2.1",
+  "description": "UI and UX design rules that keep generated interfaces from looking generic",
+  "author": {
+    "name": "rowpacmal",
+    "url": "https://github.com/rowpacmal"
+  },
+  "homepage": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "repository": "https://github.com/rowpacmal/rpm-agentic-collection",
+  "license": "MIT"
+}
