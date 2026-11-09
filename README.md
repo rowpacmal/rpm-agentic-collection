@@ -11,7 +11,7 @@ This repo is a Claude Code plugin marketplace (`rpm`). The skills follow the ope
 | `rpm-design` | `ui-design` (accessibility and craft floor, avoids AI-template tells, web and Expo/React Native), `design-md` (Google's DESIGN.md format), and `mockups` (rounds of HTML design directions to compare before building) |
 | `rpm-security` | Hooks: the bash guard (blocks catastrophic commands, asks before risky ones such as force push, `reset --hard`, Docker volume wipes, printing `.env` files, EAS builds, or publishing) and the secret guard (asks before writing API keys or private keys into files, or editing `.env` files) |
 | `rpm-testing` | `browser-testing` (Playwright CLI checks and Playwright Test e2e) and `api-testing` (curl, request-level tests, Bruno, Hurl, Postman collections via Newman), so the agent checks the running app instead of guessing |
-| `rpm-openproject` | `openproject`: read and update work packages on any OpenProject instance, configured per project (`.env.local`) or per user (`~/.config/openproject/env`). No delete path, and a read-only switch |
+| `rpm-openproject` | `openproject`: read and update work packages on any OpenProject instance, configured per project (`.env.local`) or per user (`~/.config/openproject/env`). No delete path, and a read-only switch. `ticket`: work a work package end to end, checking the ticket against the project's spec and code before planning and building |
 | `security-audit` | Upstream [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill), pinned to a reviewed commit |
 
 Plugin skills are namespaced (`/rpm-core:commit`), so they never clash with other plugins or project skills.
