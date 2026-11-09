@@ -1,6 +1,6 @@
 {
   "name": "rpm-openproject",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Read and update OpenProject work packages on any instance through API v3, with no delete path and a read-only switch",
   "author": {
     "name": "rowpacmal",
